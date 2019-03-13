@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { JuliettePageComponent } from './juliette-page/juliette-page.component';
+import { AdelePageComponent } from './adele-page/adele-page.component';
 
 const routes: Routes = [
   { path: 'juliette', component: JuliettePageComponent },
+  { path: 'adele', component: AdelePageComponent }
 
 ];
 
