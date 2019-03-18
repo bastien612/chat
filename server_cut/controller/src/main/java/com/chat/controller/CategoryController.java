@@ -1,7 +1,7 @@
 package com.chat.controller;
 
-import com.checklist.service.category.CategoryService;
-import com.checklist.model.Category;
+import com.chat.model.CategoryModel;
+import com.chat.service.category.CategoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,4 @@
-package com.chat.category;
-
-import com.chat.audit.AuditModel;
+package com.chat.model;
 
 import javax.persistence.*;
 import java.util.List;
@@ -21,6 +19,6 @@ public class ProductList extends AuditModel {
     @Column(columnDefinition = "text")
     private String title;
 
-    @ManyToMany(mappedBy = "productLists")
-    private List<Product> products;
+//    @ManyToMany(mappedBy = "productLists")
+//    private List<Product> products;
 }

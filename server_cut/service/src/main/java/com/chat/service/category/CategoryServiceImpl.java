@@ -1,6 +1,7 @@
-package com.chat.service;
+package com.chat.service.category;
 
-import com.checklist.model.Category;
+import com.chat.model.CategoryModel;
+import com.chat.repository.category.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

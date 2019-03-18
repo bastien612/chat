@@ -1,7 +1,7 @@
-package com.chat.service;
+package com.chat.service.category;
 
 import org.springframework.stereotype.Service;
-import model.CategoryModel
+import com.chat.model.CategoryModel;
 
 @Service
 public interface CategoryService {

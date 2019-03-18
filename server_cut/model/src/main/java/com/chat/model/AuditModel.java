@@ -1,4 +1,4 @@
-package com.chat.audit;
+package com.chat.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
