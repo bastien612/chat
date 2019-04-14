@@ -4,21 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.chat</groupId>
-    <artifactId>com.chat.server</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.1.RELEASE</version>
     </parent>
 
+
+    <groupId>com.chat.parent</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
+
+    <modules>
+        <module>model</module>
+        <module>controller</module>
+        <module>service</module>
+        <module>common</module>
+        <module>docker</module>
+        <module>security</module>
+        <module>repository</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -57,18 +69,13 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.security.oauth</groupId>
             <artifactId>spring-security-oauth2</artifactId>
-            <version>[2.3.5,)</version>
+            <version>2.3.5.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -100,9 +107,9 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:postgresql://localhost:5432/chat</url>
-                    <user>chat</user>
-                    <password>chat</password>
+                    <url>jdbc:postgresql://localhost:5432/check</url>
+                    <user>check</user>
+                    <password>check</password>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -113,12 +120,15 @@
                 </dependencies>
             </plugin>
             <plugin>
-
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<configuration>-->
+                    <!--<mainClass>com.chat.Application</mainClass>-->
+                <!--</configuration>-->
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
-
 </project>
