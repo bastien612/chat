@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService }  from '../services/product.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-adele-page',
@@ -12,4 +14,9 @@ export class AdelePageComponent implements OnInit {
   ngOnInit() {
   }
 
+  addProduct(): void {
+  //add en dur product
+    this.productService.postProduct(newProduct)
+    .subscribe(/*log consol objet envoye*/);
+  }
 }
