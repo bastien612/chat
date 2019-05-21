@@ -35,7 +35,7 @@ public class Product extends AuditModel {
 //            joinColumns = {@JoinColumn(name = "product_id")},
 //            inverseJoinColumns = {@JoinColumn(name = "product_list_id")}
 //    )
-//    private Set<ProductList> productLists = new HashSet<ProductList>();
+//    private Set<ShoppingList> productLists = new HashSet<ShoppingList>();
 
     public Product() {
     }
@@ -68,11 +68,11 @@ public class Product extends AuditModel {
 //        this.categories = categories;
 //    }
 
-//    public Set<ProductList> getProductLists() {
+//    public Set<ShoppingList> getProductLists() {
 //        return productLists;
 //    }
 //
-//    public void setProductLists(Set<ProductList> productLists) {
+//    public void setProductLists(Set<ShoppingList> productLists) {
 //        this.productLists = productLists;
 //    }
 

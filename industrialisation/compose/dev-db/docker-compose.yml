@@ -2,7 +2,9 @@ version: '3'
 
 services:
   db:
-    image: postgres:11.1
+    build:
+      context: ../../images/db
+      dockerfile: Dockerfile
     ports:
      - 5432:5432
     env_file: .env
@@ -12,7 +14,7 @@ services:
   adminer:
     image: adminer
     ports:
-      - 28080:8080
+      - 8081:8080
 
 volumes:
   db-data:
