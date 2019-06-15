@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JuliettePageComponent } from './juliette-page/juliette-page.component';
-import { AdelePageComponent } from './adele-page/adele-page.component';
+import { JuliettePageComponent } from './pages/juliette-page/juliette-page.component';
+import { AdelePageComponent } from './pages/adele-page/adele-page.component';
 
 @NgModule({
   declarations: [
