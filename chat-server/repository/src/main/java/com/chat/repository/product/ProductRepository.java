@@ -1,6 +1,10 @@
 package com.chat.repository.product;
 
 import com.chat.model.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository {
+import java.util.UUID;
+
+public interface ProductRepository extends JpaRepository<Product, UUID> {
+
 }

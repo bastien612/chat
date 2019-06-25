@@ -12,6 +12,6 @@ export class ProductService {
     private http: HttpClient) { }
 
   postProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>("http://localhost:", product);
+    return this.http.post<Product>("http://localhost:8080/product", product);
   }
 }

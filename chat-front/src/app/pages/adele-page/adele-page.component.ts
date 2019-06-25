@@ -17,8 +17,8 @@ export class AdelePageComponent implements OnInit {
   ngOnInit() {
   }
 
+
   addProduct(): void {
-    //add en dur product
     this.productService.postProduct(this.newProduct).subscribe(response => console.log("Produit créé : ", response));
   }
 }
