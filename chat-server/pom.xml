@@ -27,7 +27,6 @@
         <module>controller</module>
         <module>service</module>
         <module>common</module>
-        <module>docker</module>
         <module>security</module>
         <module>repository</module>
     </modules>
