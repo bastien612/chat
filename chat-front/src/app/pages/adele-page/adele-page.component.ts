@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../services/product.service';
-import { Product } from '../product';
+import { ProductService } from '../../services/product-service/product.service';
+import { Product } from '../../models/product/product';
 import { CodegenComponentFactoryResolver } from '@angular/core/src/linker/component_factory_resolver';
 
 @Component({
