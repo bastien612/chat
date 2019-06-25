@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { JuliettePageComponent } from './pages/juliette-page/juliette-page.component';
 import { AdelePageComponent } from './pages/adele-page/adele-page.component';
+import { BastienPageComponent } from './pages/bastien-page/bastien-page.component';
 
 const routes: Routes = [
   { path: 'juliette', component: JuliettePageComponent },
-  { path: 'adele', component: AdelePageComponent }
-
+  { path: 'adele', component: AdelePageComponent },
+  { path: 'bastien', component: BastienPageComponent }
 ];
 
 @NgModule({
