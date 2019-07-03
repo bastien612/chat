@@ -1,15 +1,16 @@
-package com.chat.model;
+package com.chat.model.product;
+
+import com.chat.model.AuditModel;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Table(name = "product")
-public class Product extends AuditModel {
+public class Product extends AuditModel implements ProductRessource {
 
     @Id
+    @GeneratedValue
     private UUID id;
 
     @Column(columnDefinition = "name")
@@ -39,18 +40,22 @@ public class Product extends AuditModel {
         this.name = name;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    @Override
     public UUID getId() {
         return id;
     }
 
+    @Override
     public void setId(UUID id) {
         this.id = id;
     }

@@ -1,7 +1,9 @@
 package com.chat.service.product;
 
-import com.chat.model.Product;
+import com.chat.model.product.Product;
+import com.chat.model.product.ProductRessource;
 import com.chat.repository.product.ProductRepository;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,13 +17,13 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
 
     @Override
-    public ProductDTO createProduct(ProductDTO productDto) {
-        Product product = new Product();
+    public ProductRessource createProduct(JsonNode productJson) {
+        Product productF = new Product();
 
-        product.setName(productDto.getName());
-        Product p = this.productRepository.save(product);
+        productF.setName(productJson.get("name").asText());
+        Product p = this.productRepository.save(productF);
 
-        productDto.setId(p.getId());
-        return productDto;
+
+        return p;
     }
 }

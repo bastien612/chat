@@ -8,7 +8,7 @@ import { Product } from '../../models/product/product';
   styleUrls: ['./adele-page.component.scss']
 })
 export class AdelePageComponent implements OnInit {
-  newProduct: Product = { id: 10, name: "Thon" };
+  newProduct: any = { name: "Thon" };
 
 
   constructor(private productService: ProductService) { }

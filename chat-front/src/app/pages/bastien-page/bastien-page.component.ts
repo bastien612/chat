@@ -8,7 +8,7 @@ import { Product } from '../../models/product/product';
   styleUrls: ['./bastien-page.component.scss']
 })
 export class BastienPageComponent implements OnInit {
-  newProduct: Product = { id: 10, name: "Thon" };
+  // newProduct: any = { name: "Thon" };
 
 
   constructor() { }
