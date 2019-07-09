@@ -1,16 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatListModule,
+  MatDividerModule
+} from "@angular/material";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { JuliettePageComponent } from './pages/juliette-page/juliette-page.component';
-import { AdelePageComponent } from './pages/adele-page/adele-page.component';
-import { BastienPageComponent } from './pages/bastien-page/bastien-page.component';
-import { ProductFormComponent } from './components/product-form/product-form.component';
-
-
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { JuliettePageComponent } from "./pages/juliette-page/juliette-page.component";
+import { AdelePageComponent } from "./pages/adele-page/adele-page.component";
+import { BastienPageComponent } from "./pages/bastien-page/bastien-page.component";
+import { ProductFormComponent } from "./components/product-form/product-form.component";
+import { ChecklistComponent } from "./pages/checklist/checklist.component";
 
 @NgModule({
   declarations: [
@@ -18,16 +22,19 @@ import { ProductFormComponent } from './components/product-form/product-form.com
     JuliettePageComponent,
     AdelePageComponent,
     BastienPageComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ChecklistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
