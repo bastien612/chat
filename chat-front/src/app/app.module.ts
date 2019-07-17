@@ -15,6 +15,8 @@ import { AdelePageComponent } from "./pages/adele-page/adele-page.component";
 import { BastienPageComponent } from "./pages/bastien-page/bastien-page.component";
 import { ProductFormComponent } from "./components/product-form/product-form.component";
 import { ChecklistComponent } from "./pages/checklist/checklist.component";
+import { ChecklistDetailComponent } from './pages/checklist-detail/checklist-detail.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ChecklistComponent } from "./pages/checklist/checklist.component";
     AdelePageComponent,
     BastienPageComponent,
     ProductFormComponent,
-    ChecklistComponent
+    ChecklistComponent,
+    ChecklistDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
